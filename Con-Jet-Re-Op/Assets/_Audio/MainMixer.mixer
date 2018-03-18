@@ -9,8 +9,9 @@ AudioMixerController:
   m_OutputGroup: {fileID: 0}
   m_MasterGroup: {fileID: 24300002}
   m_Snapshots:
+  - {fileID: 245552512191677586}
   - {fileID: 24500006}
-  m_StartSnapshot: {fileID: 24500006}
+  m_StartSnapshot: {fileID: 245552512191677586}
   m_SuspendThreshold: -80
   m_EnableSuspend: 1
   m_UpdateMode: 0
@@ -22,9 +23,13 @@ AudioMixerController:
     - c75eb4eddaab0d5438a56c94194f2984
     - 1c35c5b81176e4644a28226ab9d284aa
     - 43d16e0d2997f784591ba75f3c17a897
+    - 0d7806afd6f2edb4486ba1fdd0bfd061
     name: View
+  - guids:
+    - c75eb4eddaab0d5438a56c94194f2984
+    name: JustMaster
   m_CurrentViewIndex: 0
-  m_TargetSnapshot: {fileID: 24500006}
+  m_TargetSnapshot: {fileID: 245552512191677586}
 --- !u!243 &24300002
 AudioMixerGroupController:
   m_ObjectHideFlags: 0
@@ -35,6 +40,8 @@ AudioMixerGroupController:
   m_GroupID: c75eb4eddaab0d5438a56c94194f2984
   m_Children:
   - {fileID: 243163992386401812}
+  - {fileID: 243044128725262002}
+  - {fileID: 243709791277470540}
   m_Volume: 7bf0a4a5d7940324d96749bcb2ab29fa
   m_Pitch: b9f2cdf36f5a43646a5c8639e0b9546c
   m_Effects:
@@ -61,18 +68,20 @@ AudioMixerSnapshotController:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Snapshot
+  m_Name: Action
   m_AudioMixer: {fileID: 24100000}
   m_SnapshotID: dc5441ad303f1574ba60431c828ac06e
   m_FloatValues:
     7bf0a4a5d7940324d96749bcb2ab29fa: 0.10800299
+    d595a91a4dda5fa4aaf6eb1a45483ab6: 0.025578512
+    01bf630d8e6349a4bb1f96cc39b645ad: -0.0024418721
   m_TransitionOverrides: {}
 --- !u!243 &243044128725262002
 AudioMixerGroupController:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Group B
+  m_Name: Melody
   m_AudioMixer: {fileID: 24100000}
   m_GroupID: 43d16e0d2997f784591ba75f3c17a897
   m_Children: []
@@ -89,11 +98,10 @@ AudioMixerGroupController:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Group A
+  m_Name: Chords
   m_AudioMixer: {fileID: 24100000}
   m_GroupID: 1c35c5b81176e4644a28226ab9d284aa
-  m_Children:
-  - {fileID: 243044128725262002}
+  m_Children: []
   m_Volume: 00ca5ef3b26d5cb4ca384c95ae7359ed
   m_Pitch: 42d3ed7858ed3b8458c1f4dec01bb393
   m_Effects:
@@ -102,6 +110,36 @@ AudioMixerGroupController:
   m_Mute: 0
   m_Solo: 0
   m_BypassEffects: 0
+--- !u!243 &243709791277470540
+AudioMixerGroupController:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Stings
+  m_AudioMixer: {fileID: 24100000}
+  m_GroupID: 0d7806afd6f2edb4486ba1fdd0bfd061
+  m_Children: []
+  m_Volume: 01bf630d8e6349a4bb1f96cc39b645ad
+  m_Pitch: 142e6bb9358f33a4aa98afc95194f6e7
+  m_Effects:
+  - {fileID: 244665413717541522}
+  m_UserColorIndex: 0
+  m_Mute: 0
+  m_Solo: 0
+  m_BypassEffects: 0
+--- !u!244 &244665413717541522
+AudioMixerEffectController:
+  m_ObjectHideFlags: 3
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: 
+  m_EffectID: 9b05eac7b6fbb2e4387879af831d5d07
+  m_EffectName: Attenuation
+  m_MixLevel: d11599ad37d3e9e4aad37bac0665adc1
+  m_Parameters: []
+  m_SendTarget: {fileID: 0}
+  m_EnableWetMix: 0
+  m_Bypass: 0
 --- !u!244 &244754381869039542
 AudioMixerEffectController:
   m_ObjectHideFlags: 3
@@ -128,3 +166,16 @@ AudioMixerEffectController:
   m_SendTarget: {fileID: 0}
   m_EnableWetMix: 0
   m_Bypass: 0
+--- !u!245 &245552512191677586
+AudioMixerSnapshotController:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Quiet
+  m_AudioMixer: {fileID: 24100000}
+  m_SnapshotID: 3ba2da757e96efc4dbc14c371f594099
+  m_FloatValues:
+    7bf0a4a5d7940324d96749bcb2ab29fa: 0.10800299
+    d595a91a4dda5fa4aaf6eb1a45483ab6: -80
+    01bf630d8e6349a4bb1f96cc39b645ad: -0.002441872
+  m_TransitionOverrides: {}

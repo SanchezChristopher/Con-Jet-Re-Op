@@ -5,6 +5,11 @@ TagManager:
   serializedVersion: 2
   tags:
   - CombatZone
+  - Music
+  - Enemy
+  - PointA
+  - PointB
+  - RedPlayer
   layers:
   - Default
   - TransparentFX

@@ -32,9 +32,12 @@ public class homingMissile : MonoBehaviour {
         rb.velocity = transform.up * speed;
 	}
 
-    void OnTriggerEnter()
+    void OnTriggerEnter(Collider other)
     {
-        Instantiate(explosionEffect, transform.position, transform.rotation);
-        Destroy(gameObject);
+        if (other.CompareTag("Player"))
+        {
+            Instantiate(explosionEffect, transform.position, transform.rotation);
+            Destroy(gameObject);
+        }
     }
 }

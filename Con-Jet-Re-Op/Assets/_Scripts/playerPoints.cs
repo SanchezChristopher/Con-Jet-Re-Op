@@ -3,10 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class playerPoints : MonoBehaviour {
-
-    public Text pointA;
-    public Text pointB;
+public class PlayerPoints : MonoBehaviour {
+    public GameController gameController;
 
     void OnTriggerEnter(Collider other)
     {
@@ -14,23 +12,24 @@ public class playerPoints : MonoBehaviour {
         {
             if (this.CompareTag("RedPlayer"))
             {
-                pointA.text = "Point A: Red";
+                gameController.changePointARed();
             }
 
             else if(this.CompareTag("BluePlayer"))
             {
-                pointA.text = "Point A: Blue";
+                gameController.changePointABlue();
             }
-        }else if (other.CompareTag("PointB"))
+        }
+        else if (other.CompareTag("PointB"))
         {
             if (this.CompareTag("RedPlayer"))
             {
-                pointB.text = "Point B: Red";
+                gameController.changePointBRed();
             }
 
             else if (this.CompareTag("BluePlayer"))
             {
-                pointB.text = "Point B: Blue";
+                gameController.changePointBBlue();
             }
         }
     }

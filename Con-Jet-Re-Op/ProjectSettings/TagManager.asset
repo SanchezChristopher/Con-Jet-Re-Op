@@ -10,6 +10,7 @@ TagManager:
   - PointA
   - PointB
   - RedPlayer
+  - BluePlayer
   layers:
   - Default
   - TransparentFX

@@ -22,7 +22,33 @@ public class pauseMenu : MonoBehaviour {
                 Pause();
             }
         }
-	}
+        //For testing purposes
+        if (Input.GetKeyDown(KeyCode.Q) && GameObject.FindGameObjectWithTag("RedPlayer"))
+        {
+            GameObject player = GameObject.FindGameObjectWithTag("RedPlayer");
+            player.transform.position = new Vector3(111f, -8f, 1f);
+
+        }
+        if (Input.GetKeyDown(KeyCode.E) && GameObject.FindGameObjectWithTag("RedPlayer"))
+        {
+            GameObject player = GameObject.FindGameObjectWithTag("RedPlayer");
+            player.transform.position = new Vector3(-111f, -8f, 1f);
+
+        }
+        if (Input.GetKeyDown(KeyCode.Q) && GameObject.FindGameObjectWithTag("BluePlayer"))
+        {
+            GameObject player = GameObject.FindGameObjectWithTag("BluePlayer");
+            player.transform.position = new Vector3(111f, -8f, 1f);
+
+        }
+        if (Input.GetKeyDown(KeyCode.E) && GameObject.FindGameObjectWithTag("BluePlayer"))
+        {
+            GameObject player = GameObject.FindGameObjectWithTag("BluePlayer");
+            player.transform.position = new Vector3(-111f, -8f, 1f);
+
+        }
+
+    }
 
     public void Resume()
     {
